@@ -67,7 +67,6 @@
     <div class="empty-state" v-show="empty">
       No Data
     </div>
-    <detail-view-sidebar-upsell v-if="$store.getters.isCommunity" />
   </div>
 </template>
 

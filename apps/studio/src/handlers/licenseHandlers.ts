@@ -26,9 +26,9 @@ export const LicenseHandlers: ILicenseHandlers = {
     const status = await LicenseKey.getLicenseStatus();
     return {
       ...status,
-      isUltimate: status.isUltimate,
-      isCommunity: status.isCommunity,
-      isTrial: status.isTrial,
+      isUltimate: true,
+      isCommunity: false,
+      isTrial: false,
       isValidDateExpired: status.isValidDateExpired,
       isSupportDateExpired: status.isSupportDateExpired,
       maxAllowedVersion: status.maxAllowedVersion,

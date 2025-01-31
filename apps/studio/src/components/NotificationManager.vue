@@ -24,17 +24,6 @@ export default Vue.extend({
     }
   },
   mounted() {
-    if (this.$store.getters.isCommunity) {
-      const today = new Date()
-      const upgradeSuggested = SmartLocalStorage.getDate('ultimate-upsell')
-      const lastWeek = new Date(today.getTime() - (28 * 24 * 60 * 60 * 1000))
-      if (!upgradeSuggested || upgradeSuggested < lastWeek) {
-        setTimeout(() => {
-          this.upsellNotification.show()
-          SmartLocalStorage.setDate('ultimate-upsell', today)
-        }, (1000 * 60 * 5)) // 5 minutes
-      }
-    }
   }
 })
 </script>

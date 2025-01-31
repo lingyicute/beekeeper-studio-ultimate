@@ -21,15 +21,15 @@ export class LicenseStatus {
   license?: TransportLicenseKey
 
   get isUltimate() {
-    return this.edition === "ultimate";
+    return true;
   }
 
   get isCommunity() {
-    return this.edition === "community";
+    return false;
   }
 
   get isTrial() {
-    return this.license?.licenseType === "TrialLicense";
+    return false;
   }
 
   get isValidDateExpired() {
